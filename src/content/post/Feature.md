@@ -1,9 +1,9 @@
 ---
 publishDate: 2023-01-12T00:00:00Z
-title: Get started with AstroWind to create a website using Astro and Tailwind CSS
-description: Lorem ipsum dolor sit amet
-excerpt: Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur.
-image: ~/assets/images/do-more.jpg
+title: Feature
+description: Feature Photo
+excerpt: View 2023 design work for your house
+image: ~/assets/images/testing.webp
 category: Tutorials
 tags:
   - astro

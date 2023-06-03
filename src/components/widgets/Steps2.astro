@@ -1,5 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
+import { Picture } from '@astrojs/image/components';
+import AnimatedArrow from '~/components/widgets/AnimatedArrow.astro'
 
 interface Item {
   title: string;
@@ -18,6 +20,7 @@ export interface Props {
   subtitle?: string;
   highlight?: string;
   callToAction?: string | CallToAction;
+  image?: string | any; // TODO: find HTMLElementProps
   items: Array<Item>;
 }
 
@@ -26,6 +29,7 @@ const {
   subtitle = await Astro.slots.render('subtitle'),
   highlight,
   callToAction = await Astro.slots.render('callToAction'),
+  image = await Astro.slots.render('image'),
   items = [],
 } = Astro.props;
 
@@ -89,10 +93,7 @@ const {
                     callToAction &&
                     callToAction.text &&
                     callToAction.href && (
-                      <a class="btn btn-primary mb-4 sm:mb-0" href={callToAction.href} target="_blank" rel="noopener">
-                        {callToAction.icon && <Icon name={callToAction.icon} class="w-5 h-5 mr-1 -ml-1.5" />}
-                        {callToAction.text}
-                      </a>
+                      <AnimatedArrow />
                     )
                   )
                 }
@@ -120,6 +121,29 @@ const {
               }
             </ul>
           </div>
+        </div>
+        <br><br/>
+         <div class="basis-1/2">
+          {
+            image && (
+              <div class="relative m-auto max-w-5xl">
+                {typeof image === 'string' ? (
+                  <Fragment set:html={image} />
+                ) : (
+                  <Picture
+                    class="mx-auto rounded-md w-full"
+                    widths={[400, 768, 1024, 2040]}
+                    sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                    aspectRatio={600 / 380}
+                    loading="eager"
+                    width={600}
+                    height={600}
+                    {...image}
+                  />
+                )}
+              </div>
+            )
+          }
         </div>
       </div>
     </div>

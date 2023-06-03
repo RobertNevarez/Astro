@@ -1,0 +1,75 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { SITE } from '~/config.mjs';
+import Steps from '~/components/widgets/Steps.astro';
+
+
+import { headerData } from '~/data';
+
+const meta = {
+    
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+
+};
+---
+
+<Layout {meta}>
+  <Fragment slot="header">
+    <Header
+    {...headerData}
+    showRssFeed
+    showToggleTheme
+    position="center"
+  />
+  </Fragment>
+
+  
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Our Phone Number',
+        description:
+          '201-333-4444', 
+      },
+      {
+        title: 'Our Email Address',
+        description:
+          'NelsonConstructionServices@gmail.com',
+      },
+      {
+        title: 'Our Commitment',
+        description:
+          '24/7 hour service with less than a day response time',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/phoneImageOne.png'),
+      alt: 'Steps image',
+      
+      
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Contact Us</h3>
+      Thank you for choosing Nelson Construction Services!
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+
+  
+
+  <!-- CallToAction Widget *********** -->
+</Layout>

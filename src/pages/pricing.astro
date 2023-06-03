@@ -1,0 +1,40 @@
+---
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from '~/config.mjs';
+import AnimatedArrow from '~/components/widgets/AnimatedArrow.astro'
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+<Layout {meta}>
+
+    <Steps2
+        title="Pricing"
+        subtitle="Prices has gone up and so has quality"
+        callToAction={{
+          text: 'Contact Us',
+          href: 'https://github.com/onwidget/astrowind',
+        }}
+        items={[
+          {
+            title: 'Price Hike',
+            description:
+              'Home renovation costs can unexpectedly hike due to factors such as unforeseen structural issues, changes in design plans, fluctuating material prices, or upgrades in appliances and fixtures.',
+          },
+          {
+            title: 'Budgeting',
+            description:
+              'Proper budgeting allows you to understand and control where your money is going, helping to avoid unnecessary expenditures and maximize the value of your investment.',
+          },
+        ]}
+        image={{
+            src: import('~/assets/images/next4.jpg'),
+            alt: 'Steps image',
+          }}
+      />
+
+</Layout>

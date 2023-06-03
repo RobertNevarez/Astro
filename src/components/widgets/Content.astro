@@ -81,20 +81,21 @@ const {
           )
         }
       </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2" >
         {
           image && (
-            <div class="relative m-auto max-w-4xl">
+            <div class="flex m-auto max-w-4xl"  >
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
                 <Picture
                   class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
+                  style={{background:"transparent",border:"2rem"}}
                   width={500}
                   height={500}
                   widths={[400, 768]}
                   sizes="(max-width: 768px) 100vw, 432px"
-                  aspectRatio="500:500"
+                  aspectRatio="500:1000"
                   {...image}
                 />
               )}

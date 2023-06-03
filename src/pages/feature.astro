@@ -1,0 +1,46 @@
+---
+
+import Steps from '~/components/widgets/Steps.astro';
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+<Layout {meta}>
+    <Steps
+    title="Feature"
+    items={[
+      {
+        title: 'Design Concept',
+        description:
+          'At Nelson Construction Services, our range of specialties ensures a complete home renovation experience tailored to your needs. Our expertise in remodeling focuses on revamping your kitchen and bathroom, transforming them into stylish and functional spaces that incorporate the latest trends and innovative materials.',
+          icon: 'tabler:check',
+      },
+      {
+        title: 'Framework Concept',
+        description:
+          'Our drywall installation is executed with precision, ensuring a seamless and smooth finish, ready for painting or other treatments.',
+          icon: 'tabler:check',
+      },
+      {
+        title: 'Modern Design',
+        description:
+          'Beyond these core services, we are equipped to handle other home renovation projects, from installing custom cabinetry to upgrading your homes electrical and plumbing systems.',
+          icon: 'tabler:check',
+      },
+      {
+        title: 'Contact NCS',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/test3.jpg'),
+      alt: 'Steps image',
+    }}
+    />
+
+</Layout>
