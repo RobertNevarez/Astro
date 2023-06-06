@@ -1,0 +1,48 @@
+.carousel {
+    position: relative;
+  
+   overflow: hidden;
+    width: 100%;
+  }
+  
+.carousel-images {
+    display: flex;
+    width: 50%;
+    transition: transform 0.5s ease;
+  }
+
+  
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+.carousel-control.prev {
+    left: 1rem;
+  }
+  
+.carousel-control.next {
+    right: 1rem;
+  }
+.Herosection {
+    border-radius: 1rem;
+    border: solid var(--button_outline_color);
+   
+    display: flex;
+   
+
+ 
+    
+    align-items: center;
+    overflow: hidden;
+    background: transparent;
+}
+  

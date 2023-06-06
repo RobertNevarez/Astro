@@ -1,0 +1,33 @@
+---
+import { useState } from 'react';
+
+const images = [
+  "image1.jpg",
+  "image2.jpg",
+  "image3.jpg",
+];
+
+function Carousel() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((currentSlide + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((currentSlide - 1 + images.length) % images.length);
+  };
+
+  return (
+    <div>
+      <img src={images[currentSlide]} />
+      <button onClick={prevSlide}>Previous</button>
+      <button onClick={nextSlide}>Next</button>
+    </div>
+  );
+}
+
+export default Carousel;
+---
+
+<Carousel :visible />

@@ -12,12 +12,28 @@ import LatestPosts from '~/components/blog/LatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import pic from '../assets/images/carousel/IMG_0908.jpg'
+import pic2 from '../assets/images/carousel/IMG_0909.jpg'
+import pic3 from '../assets/images/carousel/IMG_0910.jpg'
+import pic4 from '../assets/images/carousel/IMG_0911.jpg'
+import pic5 from '../assets/images/carousel/IMG_0912.jpg'
+import pic6 from '../assets/images/carousel/IMG_0913.jpg'
+import pic7 from '../assets/images/carousel/IMG_0914.jpg'
+import pic8 from '../assets/images/carousel/IMG_0915.jpg'
+import pic9 from '../assets/images/carousel/IMG_0916.jpg'
+import pic10 from '../assets/images/carousel/IMG_0917.jpg'
+import pic11 from '../assets/images/carousel/IMG_0918.jpg'
+import pic12 from '../assets/images/carousel/IMG_0919.jpg'
+import pic13 from '../assets/images/carousel/IMG_0920.jpg'
+
 
 const meta = {
   title: SITE.title,
   description: SITE.description,
   dontUseTitleTemplate: true,
 };
+
+
 ---
 
 <Layout {meta}>
@@ -26,19 +42,22 @@ const meta = {
   <Hero
     callToAction={{ text: 'Contact Us', href: '/ContactUs' }}
     
-    image={{ src: import('~/assets/images/next2.jpg'), alt: 'AstroWind Hero Image' }}
+  
+    
   >
-    <Fragment slot="title">
-      Why choose
-      <span class="text-accent dark:text-white highlight"> NCS</span> for your next home renovation    </Fragment>
-
+  
+  <Fragment slot="title">
+    Why choose
+    <span class="text-accent dark:text-white highlight"> Nelson Construction Services</span> for your next home renovation    </Fragment>
+    
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
         <span class="font-semibold"></span>Nelson Construction Services</span> Led by Nelson Guerrero with over 30 years of experience, is a premier construction company that meets your remodeling needs. Our skilled team of professionals is dedicated to transforming your living spaces to a modern design, functionality, and aesthetics. We offer expert painting, flooring, and drywall installation to ensure a comprehensive home improvement solution.</span
-      >
-    
-    </Fragment>
-  </Hero>
+        >
+        
+      </Fragment>
+    </Hero>
+  
 
   <!-- Note Widget ******************* -->
 
