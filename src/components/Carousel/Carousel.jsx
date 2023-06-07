@@ -30,7 +30,6 @@ function Carousel  ()  {
   const prevSlide = () => {
     setSlideIndex((slideIndex - 1 + carouselimages.length) % carouselimages.length);
   };
-  console.log(carouselimages)
 
   return (
    

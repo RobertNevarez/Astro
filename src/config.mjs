@@ -1,16 +1,18 @@
 import defaultImage from './assets/images/display.png';
 
+console.log(defaultImage.src)
+
 const CONFIG = {
   name: 'AstroWind',
 
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://nelsonconstructionservicesnj.com/',
   basePathname: '/',
   trailingSlash: false,
 
   title: '🚀 Nelson Construction Services — Dream house renovation + design',
   description:
     'Painting, Drywall, and Flooring for bathroom, kitchen, living rooms, and bedrooms with modern design ',
-  defaultImage: defaultImage,
+  defaultImage: defaultImage.src,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
